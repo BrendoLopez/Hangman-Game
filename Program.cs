@@ -1,14 +1,14 @@
 ﻿using Hangman_Game.Hang;
+using Hangman_Game.HomeScreen;
 
 class Program
 {
-    static void Main()
+    public static void Main()
     {
-        int erros = 6;
 
-        for (int i = 0; i <= erros; i++)
-        {
-            DesenhoForca.DesenharForca(int.Parse(Console.ReadLine()));
-        }
+
+        //Iniciar o game com saudação.
+        Saudacao.SaudacaoInicial();
+        InterfaceJogo.ExibirPlavra();
     }
 }

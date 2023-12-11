@@ -1,12 +1,25 @@
 ﻿namespace Hangman_Game.Hang;
 
-public class DesenhoForca
+public class JogoForca
 {
-    public int Erros { get; set; }
+    public string NickNamePlayer { get; set; }
+    private string PalavraSecreta { get ; set; }
+    private string LetrasCorretas { get; set; }
+    private int MaximoTentativas { get; set; }
+    private int QuantidadeTentativas { get; set; }
+    private int QuantidadeErros { get; set; }
 
-    public DesenhoForca(int erros)
+    public JogoForca()
     {
-        Erros = erros;
+    }
+
+    public JogoForca(string palavraSecreta, string letrasCorretas, int maximoTentativas, int quantidadeTentativas, int quantidadeErros)
+    {
+        PalavraSecreta = palavraSecreta.ToUpper();
+        LetrasCorretas = letrasCorretas.ToUpper();
+        MaximoTentativas = maximoTentativas;
+        QuantidadeTentativas = quantidadeTentativas;
+        QuantidadeErros = quantidadeErros;
     }
 
     public static void DesenharForca(int erros)
