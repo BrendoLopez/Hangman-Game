@@ -13,6 +13,11 @@ public class JogoForca
     {
     }
 
+    public JogoForca(string nickNamePlayer)
+    {
+        NickNamePlayer = nickNamePlayer;
+    }
+
     public JogoForca(string nickNamePlayer, string palavraSecreta, string letrasCorretas, int maximoTentativas, int quantidadeTentativas, int quantidadeErros)
     {
         NickNamePlayer = nickNamePlayer;

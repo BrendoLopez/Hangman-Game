@@ -1,6 +1,7 @@
 ﻿using Hangman_Game.Hang;
 using Hangman_Game.HomeScreen;
 
+
 class Program
 {
     public static void Main()
@@ -9,10 +10,7 @@ class Program
         Saudacao.SaudacaoInicial();
 
         //Função para iniciar o game.
-        InterfaceJogo.IniciarJogo();
-
-        //
-        Palavra.StartGame();
-
+        JogoForca jogoForca = InterfaceJogo.IniciarJogo();
+        Palavra.StartGame(jogoForca);
     }
 }

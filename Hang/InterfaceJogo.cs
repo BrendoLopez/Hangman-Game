@@ -2,7 +2,7 @@
 
 public class InterfaceJogo
 {
-    public static void IniciarJogo()
+    public static JogoForca IniciarJogo()
     {
         Console.WriteLine("Caro jogador, nos forneça o seu nick para podermos mencioná-lo futuramente.");
         Console.Write("Nickname: ");
@@ -36,11 +36,13 @@ public class InterfaceJogo
             Console.WriteLine($"Não existe tempo, você pode levar todo o tempo do mundo, boa sorte!");
             Console.WriteLine("");
         }
-
+        Console.WriteLine();
         Console.WriteLine("Tudo certo então? Vamos prosseguir!");
         Console.Write("Pressione alguma tecla para continuarmos: ");
         Console.ReadKey();
         Console.Clear();
+
+        return nickPlayer;
     }
 
     public static void RealizarJogada()
