@@ -5,10 +5,12 @@ class Program
 {
     public static void Main()
     {
-
-
-        //Iniciar o game com saudação.
+        //Home do game, saudação ao player.
         Saudacao.SaudacaoInicial();
-        InterfaceJogo.ExibirPlavra();
+
+        //Função para iniciar o game.
+        InterfaceJogo.IniciarJogo();
+
+
     }
 }

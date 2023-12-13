@@ -13,10 +13,11 @@ public class JogoForca
     {
     }
 
-    public JogoForca(string palavraSecreta, string letrasCorretas, int maximoTentativas, int quantidadeTentativas, int quantidadeErros)
+    public JogoForca(string nickNamePlayer, string palavraSecreta, string letrasCorretas, int maximoTentativas, int quantidadeTentativas, int quantidadeErros)
     {
-        PalavraSecreta = palavraSecreta.ToUpper();
-        LetrasCorretas = letrasCorretas.ToUpper();
+        NickNamePlayer = nickNamePlayer;
+        PalavraSecreta = palavraSecreta;
+        LetrasCorretas = letrasCorretas;
         MaximoTentativas = maximoTentativas;
         QuantidadeTentativas = quantidadeTentativas;
         QuantidadeErros = quantidadeErros;
