@@ -11,6 +11,8 @@ class Program
         //Função para iniciar o game.
         InterfaceJogo.IniciarJogo();
 
+        //
+        Palavra.StartGame();
 
     }
 }
