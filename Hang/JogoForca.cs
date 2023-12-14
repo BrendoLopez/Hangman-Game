@@ -3,8 +3,6 @@
 public class JogoForca
 {
     public string NickNamePlayer { get; set; }
-    private string PalavraSecreta { get ; set; }
-    private string LetrasCorretas { get; set; }
     private int MaximoTentativas { get; set; }
     private int QuantidadeTentativas { get; set; }
     private int QuantidadeErros { get; set; }
@@ -18,11 +16,8 @@ public class JogoForca
         NickNamePlayer = nickNamePlayer;
     }
 
-    public JogoForca(string nickNamePlayer, string palavraSecreta, string letrasCorretas, int maximoTentativas, int quantidadeTentativas, int quantidadeErros)
+    public JogoForca(string nickNamePlayer, int maximoTentativas, int quantidadeTentativas, int quantidadeErros) : this(nickNamePlayer)
     {
-        NickNamePlayer = nickNamePlayer;
-        PalavraSecreta = palavraSecreta;
-        LetrasCorretas = letrasCorretas;
         MaximoTentativas = maximoTentativas;
         QuantidadeTentativas = quantidadeTentativas;
         QuantidadeErros = quantidadeErros;
