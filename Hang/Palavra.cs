@@ -2,12 +2,12 @@
 
 public class Palavra
 {
-    public string[] PalavraTema { get; set; } = { "Futebol", "Hospital", "Escola", "Oceano"};
-    public string[] PalavraSecreta { get; set; } = { "GANDULA", "CIRURGIAO", "COORDENAÇAO", "TARTARUGA"};
+    public string[] PalavraTema { get; set; } = { "Futebol", "Hospital", "Escola", "Oceano" };
+    public string[] PalavraSecreta { get; set; } = { "GANDULA", "CIRURGIAO", "COORDENAÇAO", "TARTARUGA" };
 
     public Palavra()
     {
-        
+
     }
 
     public Palavra(string[] palavraTema)
@@ -40,7 +40,7 @@ public class Palavra
             {
                 Console.WriteLine();
                 Console.WriteLine($"O tema sorteado foi: >> {palavraTema.PalavraTema[i]} <<");
-            }            
+            }
             else if (indiceSorteado == 1)
             {
                 Console.WriteLine();
@@ -50,28 +50,54 @@ public class Palavra
             {
                 Console.WriteLine();
                 Console.WriteLine($"O tema sorteado foi: >> {palavraTema.PalavraTema[i]} <<");
-            }            
+            }
             else if (indiceSorteado == 3)
             {
                 Console.WriteLine();
                 Console.WriteLine($"O tema sorteado foi: >> {palavraTema.PalavraTema[i]} <<");
             }
         }
-        if (indiceSorteado == 0)
+
+        JogoForca tentativas = new JogoForca();
+        tentativas.QuantidadeTentativas = 0;
+        tentativas.MaximoTentativas = 6;
+
+        Console.WriteLine();
+        Console.WriteLine("1ª tentativa: Pense em uma única letra que contenha na palavra relacionada ao tema sorteado!");
+        Console.WriteLine("_ _ _ _ _ _ _ _ _");
+        string letraTentativaUsuario = Console.ReadLine();
+        int posicaoArrayPalavraSecreta = 0;
+
+        for (int i = 0; i <= indiceSorteado; i++)
         {
-            Console.WriteLine($"{palavraSecreta.PalavraSecreta[0]}");
+            posicaoArrayPalavraSecreta = i;
         }
-        else if (indiceSorteado == 1)
+        Console.WriteLine(posicaoArrayPalavraSecreta);
+
+        for (int i = tentativas.QuantidadeTentativas; i <= tentativas.QuantidadeErros; i++)
         {
-            Console.WriteLine($"{palavraSecreta.PalavraSecreta[1]}");
+            if (letraTentativaUsuario == palavraSecreta.PalavraSecreta[i])
+            {
+                Console.WriteLine(palavraSecreta.PalavraSecreta[i]);
+            }
         }
-        else if (indiceSorteado == 2)
-        {
-            Console.WriteLine($"{palavraSecreta.PalavraSecreta[2]}");
-        }
-        else if (indiceSorteado == 3)
-        {
-            Console.WriteLine($"{palavraSecreta.PalavraSecreta[3]}");
-        }
+
+        //Mostrar a palavra inteira.
+        //if (indiceSorteado == 0)
+        //{
+        //    Console.WriteLine($"{palavraSecreta.PalavraSecreta[0]}");
+        //}
+        //else if (indiceSorteado == 1)
+        //{
+        //    Console.WriteLine($"{palavraSecreta.PalavraSecreta[1]}");
+        //}
+        //else if (indiceSorteado == 2)
+        //{
+        //    Console.WriteLine($"{palavraSecreta.PalavraSecreta[2]}");
+        //}
+        //else if (indiceSorteado == 3)
+        //{
+        //    Console.WriteLine($"{palavraSecreta.PalavraSecreta[3]}");
+        //}
     }
 }

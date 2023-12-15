@@ -3,9 +3,9 @@
 public class JogoForca
 {
     public string NickNamePlayer { get; set; }
-    private int MaximoTentativas { get; set; }
-    private int QuantidadeTentativas { get; set; }
-    private int QuantidadeErros { get; set; }
+    public int MaximoTentativas { get; set; }
+    public int QuantidadeTentativas { get; set; }
+    public int QuantidadeErros { get; set; }
 
     public JogoForca()
     {
@@ -14,6 +14,11 @@ public class JogoForca
     public JogoForca(string nickNamePlayer)
     {
         NickNamePlayer = nickNamePlayer;
+    }
+
+    public JogoForca(int quantidadeTentativas)
+    {
+        QuantidadeTentativas = quantidadeTentativas;
     }
 
     public JogoForca(string nickNamePlayer, int maximoTentativas, int quantidadeTentativas, int quantidadeErros) : this(nickNamePlayer)
